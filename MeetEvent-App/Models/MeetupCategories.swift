@@ -35,3 +35,7 @@ extension MeetupCategories: Decodable {
         self.init(name: name!, sortName: sortName!, shortname: shortname!)
     }
 }
+
+struct Results: Decodable {
+    let results:[MeetupCategories]
+}
