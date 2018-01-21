@@ -8,15 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28253320150DD700C187D9 /* MeetupCategories.swift */; };
+		1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */; };
 		2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7262013C2D300EDC3D7 /* AppDelegate.swift */; };
 		2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7282013C2D300EDC3D7 /* ViewController.swift */; };
 		2093A72C2013C2D300EDC3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2093A72A2013C2D300EDC3D7 /* Main.storyboard */; };
 		2093A72E2013C2D300EDC3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2093A72D2013C2D300EDC3D7 /* Assets.xcassets */; };
 		2093A7312013C2D300EDC3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2093A72F2013C2D300EDC3D7 /* LaunchScreen.storyboard */; };
+		A7B41CBE099DC0F692C044F8 /* Pods_MeetEvent_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF85408895F37DF7087498DB /* Pods_MeetEvent_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C28253320150DD700C187D9 /* MeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCategories.swift; sourceTree = "<group>"; };
+		1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObtainMeetupCategories.swift; sourceTree = "<group>"; };
 		2093A7232013C2D300EDC3D7 /* MeetEvent-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MeetEvent-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2093A7262013C2D300EDC3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2093A7282013C2D300EDC3D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		2093A72D2013C2D300EDC3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2093A7302013C2D300EDC3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2093A7322013C2D300EDC3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF85408895F37DF7087498DB /* Pods_MeetEvent_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetEvent_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFA072E9C6AA6A4E022C59DE /* Pods-MeetEvent-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetEvent-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App.release.xcconfig"; sourceTree = "<group>"; };
+		F60A8E1E84320ACCF04E1E6A /* Pods-MeetEvent-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetEvent-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B41CBE099DC0F692C044F8 /* Pods_MeetEvent_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,7 @@
 		1C28253120150DBD00C187D9 /* Networking Files */ = {
 			isa = PBXGroup;
 			children = (
+				1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */,
 			);
 			path = "Networking Files";
 			sourceTree = "<group>";
@@ -60,6 +68,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		20597D4EACC55611F27C3FD7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F60A8E1E84320ACCF04E1E6A /* Pods-MeetEvent-App.debug.xcconfig */,
+				DFA072E9C6AA6A4E022C59DE /* Pods-MeetEvent-App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2093A71A2013C2D300EDC3D7 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +85,8 @@
 				1C28253020150DA700C187D9 /* View Controllers */,
 				2093A7252013C2D300EDC3D7 /* MeetEvent-App */,
 				2093A7242013C2D300EDC3D7 /* Products */,
+				20597D4EACC55611F27C3FD7 /* Pods */,
+				BF408119AF5D298B93B1DAAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +110,14 @@
 			path = "MeetEvent-App";
 			sourceTree = "<group>";
 		};
+		BF408119AF5D298B93B1DAAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF85408895F37DF7087498DB /* Pods_MeetEvent_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2093A7352013C2D300EDC3D7 /* Build configuration list for PBXNativeTarget "MeetEvent-App" */;
 			buildPhases = (
+				B2B7A6339B12EE1EC0710ECE /* [CP] Check Pods Manifest.lock */,
 				2093A71F2013C2D300EDC3D7 /* Sources */,
 				2093A7202013C2D300EDC3D7 /* Frameworks */,
 				2093A7212013C2D300EDC3D7 /* Resources */,
+				BBBF9C8FA0FBCAE572509C9A /* [CP] Embed Pods Frameworks */,
+				36B45F8483AB7F6A391178F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +188,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36B45F8483AB7F6A391178F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B7A6339B12EE1EC0710ECE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeetEvent-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBBF9C8FA0FBCAE572509C9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2093A71F2013C2D300EDC3D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -165,6 +253,7 @@
 			files = (
 				1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */,
 				2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */,
+				1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */,
 				2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +389,7 @@
 		};
 		2093A7362013C2D300EDC3D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60A8E1E84320ACCF04E1E6A /* Pods-MeetEvent-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +405,7 @@
 		};
 		2093A7372013C2D300EDC3D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA072E9C6AA6A4E022C59DE /* Pods-MeetEvent-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
