@@ -36,9 +36,9 @@ class CategoryNetworkingLayer {
     var baseURL = "https://api.meetup.com"
     
     func network(route: MeetupRoutes, completionHandler: @escaping (Data) -> Void) {
-        var urlStringPath = URL(string: baseURL.appending(route.path()))
-        var fullURLString = urlStringPath?.appendingQueryParameters(route.urlParameters())
-        var getRequest = URLRequest(url: fullURLString!)
+        let urlStringPath = URL(string: baseURL.appending(route.path()))
+        let fullURLString = urlStringPath?.appendingQueryParameters(route.urlParameters())
+        let getRequest = URLRequest(url: fullURLString!)
         session.dataTask(with: getRequest) { (data, response, error) in
             if let data = data {
                 completionHandler(data)

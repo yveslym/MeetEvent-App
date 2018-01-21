@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let networking = CategoryNetworkingLayer()
+        networking.network(route: .categories) { (data) in
+            let json = try? JSONDecoder().decode(Results.self, from: data)
+            print(json)
+        }
     }
 
     override func didReceiveMemoryWarning() {
