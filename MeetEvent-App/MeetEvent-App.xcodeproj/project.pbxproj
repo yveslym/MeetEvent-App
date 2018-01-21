@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28253320150DD700C187D9 /* MeetupCategories.swift */; };
 		2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7262013C2D300EDC3D7 /* AppDelegate.swift */; };
 		2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7282013C2D300EDC3D7 /* ViewController.swift */; };
 		2093A72C2013C2D300EDC3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2093A72A2013C2D300EDC3D7 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C28253320150DD700C187D9 /* MeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCategories.swift; sourceTree = "<group>"; };
 		2093A7232013C2D300EDC3D7 /* MeetEvent-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MeetEvent-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2093A7262013C2D300EDC3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2093A7282013C2D300EDC3D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,9 +39,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C28253020150DA700C187D9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2093A7282013C2D300EDC3D7 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1C28253120150DBD00C187D9 /* Networking Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Networking Files";
+			sourceTree = "<group>";
+		};
+		1C28253220150DC800C187D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C28253320150DD700C187D9 /* MeetupCategories.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2093A71A2013C2D300EDC3D7 = {
 			isa = PBXGroup;
 			children = (
+				1C28253220150DC800C187D9 /* Models */,
+				1C28253120150DBD00C187D9 /* Networking Files */,
+				1C28253020150DA700C187D9 /* View Controllers */,
 				2093A7252013C2D300EDC3D7 /* MeetEvent-App */,
 				2093A7242013C2D300EDC3D7 /* Products */,
 			);
@@ -60,7 +88,6 @@
 				2093A7392013C47200EDC3D7 /* Views */,
 				2093A7382013C46100EDC3D7 /* Models */,
 				2093A7262013C2D300EDC3D7 /* AppDelegate.swift */,
-				2093A7282013C2D300EDC3D7 /* ViewController.swift */,
 				2093A72A2013C2D300EDC3D7 /* Main.storyboard */,
 				2093A72D2013C2D300EDC3D7 /* Assets.xcassets */,
 				2093A72F2013C2D300EDC3D7 /* LaunchScreen.storyboard */,
@@ -163,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */,
 				2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */,
 				2093A73D2013C50A00EDC3D7 /* User-Interactive.xcdatamodeld in Sources */,
 				2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */,
