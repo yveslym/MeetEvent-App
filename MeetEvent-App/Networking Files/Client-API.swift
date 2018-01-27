@@ -14,7 +14,8 @@ enum Events {
 //    case events
 //    case location(id: Int)
 //    case likes(id:Int)
-    case categories(sign: String, page: Int, key: Int)
+      case meetupCategories(sign: String, page: Int, key: Int)
+      case meetupEvents(key:Int, sign: String, page: Int, topic: String)
 }
 extension Events: TargetType {
     var baseURL: URL {
@@ -24,40 +25,45 @@ extension Events: TargetType {
     
     var path: String {
         switch self {
-        case .categories:
+        case .meetupCategories:
              return "/2/categories"
+        case .meetupEvents:
+            return "/2/open_events"
         }
+    
     }
     
     var method: Moya.Method {
         switch self {
-        case .categories:
+        case .meetupCategories:
+            return .get
+        case .meetupEvents:
             return .get
         }
     }
     
     var sampleData: Data {
         switch self {
-        
-        case .categories: return "{}".data(using: String.Encoding.utf8)!
+        case .meetupCategories: fallthrough
+        case .meetupEvents: return "{}".data(using: String.Encoding.utf8)!
+            
         }
     }
     
     var task: Task {
         switch self{
             
-        
-        case .categories(let sign, let page, let key):
+        case .meetupCategories(let sign, let page, let key):
             return .requestParameters(parameters: ["sign": sign, "page": page, "key": key], encoding: URLEncoding.default)
-
+        case .meetupEvents(let key, let group_urlname, let sign, let topic):
+            return .requestParameters(parameters: ["key": key, "group_urlname": group_urlname, "sign": sign, "topic": topic], encoding: URLEncoding.default)
         }
     }
     
     var headers: [String : String]? {
         switch self{
-            
-        case .categories(let sign, let page, let key):
-            return [:]
+        case .meetupCategories: fallthrough
+        case .meetupEvents: return [:]
         }
     }
     
