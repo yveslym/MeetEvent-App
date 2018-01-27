@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C0C3A2E201C1C3B00AA3F61 /* Client-API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A2D201C1C3B00AA3F61 /* Client-API.swift */; };
+		1C0C3A30201C2BED00AA3F61 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A2F201C2BED00AA3F61 /* NetworkAdapter.swift */; };
 		1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28253320150DD700C187D9 /* MeetupCategories.swift */; };
 		1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */; };
 		2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7262013C2D300EDC3D7 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		1C0C3A2D201C1C3B00AA3F61 /* Client-API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client-API.swift"; sourceTree = "<group>"; };
+		1C0C3A2F201C2BED00AA3F61 /* NetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		1C28253320150DD700C187D9 /* MeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCategories.swift; sourceTree = "<group>"; };
 		1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObtainMeetupCategories.swift; sourceTree = "<group>"; };
 		2093A7232013C2D300EDC3D7 /* MeetEvent-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MeetEvent-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,7 @@
 			children = (
 				1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */,
 				1C0C3A2D201C1C3B00AA3F61 /* Client-API.swift */,
+				1C0C3A2F201C2BED00AA3F61 /* NetworkAdapter.swift */,
 			);
 			path = "Networking Files";
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0C3A30201C2BED00AA3F61 /* NetworkAdapter.swift in Sources */,
 				1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */,
 				1C0C3A2E201C1C3B00AA3F61 /* Client-API.swift in Sources */,
 				2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */,
