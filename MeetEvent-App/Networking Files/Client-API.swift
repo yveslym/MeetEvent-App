@@ -14,8 +14,8 @@ enum Events {
 //    case events
 //    case location(id: Int)
 //    case likes(id:Int)
-      case meetupCategories(sign: String, page: Int, key: Int)
-      case meetupEvents(key:Int, sign: String, page: Int, topic: String)
+      case meetupCategories( page: Int, key: String)
+      case meetupEvents(key: String, page: Int, topic: String)
 }
 extension Events: TargetType {
     var baseURL: URL {
@@ -53,10 +53,10 @@ extension Events: TargetType {
     var task: Task {
         switch self{
             
-        case .meetupCategories(let sign, let page, let key):
-            return .requestParameters(parameters: ["sign": sign, "page": page, "key": key], encoding: URLEncoding.default)
-        case .meetupEvents(let key, let group_urlname, let sign, let topic):
-            return .requestParameters(parameters: ["key": key, "group_urlname": group_urlname, "sign": sign, "topic": topic], encoding: URLEncoding.default)
+        case .meetupCategories( let page, let key):
+            return .requestParameters(parameters: ["sign": "true", "page": page, "key": key], encoding: URLEncoding.default)
+        case .meetupEvents(let page, let key, let topic):
+            return .requestParameters(parameters: ["key": key, "topic": topic], encoding: URLEncoding.default)
         }
     }
     
