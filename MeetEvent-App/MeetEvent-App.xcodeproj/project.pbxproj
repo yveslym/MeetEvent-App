@@ -11,8 +11,8 @@
 		1C0C3A30201C2BED00AA3F61 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A2F201C2BED00AA3F61 /* NetworkAdapter.swift */; };
 		1C0C3A32201C31D800AA3F61 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A31201C31D800AA3F61 /* EventManager.swift */; };
 		1C0C3A34201C565200AA3F61 /* MeetupEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A33201C565200AA3F61 /* MeetupEvents.swift */; };
-		1C0C3A37201C585600AA3F61 /* MeetEvent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A35201C585600AA3F61 /* MeetEvent.xcdatamodeld */; };
 		1C0C3A3A201C5B3000AA3F61 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A39201C5B3000AA3F61 /* CoreDataStack.swift */; };
+		1C0C3A41201CE48800AA3F61 /* MeetEvent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A3F201CE48800AA3F61 /* MeetEvent.xcdatamodeld */; };
 		1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28253320150DD700C187D9 /* MeetupCategories.swift */; };
 		1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */; };
 		2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7262013C2D300EDC3D7 /* AppDelegate.swift */; };
@@ -28,8 +28,8 @@
 		1C0C3A2F201C2BED00AA3F61 /* NetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		1C0C3A31201C31D800AA3F61 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		1C0C3A33201C565200AA3F61 /* MeetupEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupEvents.swift; sourceTree = "<group>"; };
-		1C0C3A36201C585600AA3F61 /* MeetEvent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeetEvent.xcdatamodel; sourceTree = "<group>"; };
 		1C0C3A39201C5B3000AA3F61 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1C0C3A40201CE48800AA3F61 /* MeetEvent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeetEvent.xcdatamodel; sourceTree = "<group>"; };
 		1C28253320150DD700C187D9 /* MeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCategories.swift; sourceTree = "<group>"; };
 		1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObtainMeetupCategories.swift; sourceTree = "<group>"; };
 		2093A7232013C2D300EDC3D7 /* MeetEvent-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MeetEvent-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,7 +131,7 @@
 				2093A72D2013C2D300EDC3D7 /* Assets.xcassets */,
 				2093A72F2013C2D300EDC3D7 /* LaunchScreen.storyboard */,
 				2093A7322013C2D300EDC3D7 /* Info.plist */,
-				1C0C3A35201C585600AA3F61 /* MeetEvent.xcdatamodeld */,
+				1C0C3A3F201CE48800AA3F61 /* MeetEvent.xcdatamodeld */,
 			);
 			path = "MeetEvent-App";
 			sourceTree = "<group>";
@@ -283,10 +283,10 @@
 				1C0C3A2E201C1C3B00AA3F61 /* Client-API.swift in Sources */,
 				2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */,
 				1C0C3A3A201C5B3000AA3F61 /* CoreDataStack.swift in Sources */,
-				1C0C3A37201C585600AA3F61 /* MeetEvent.xcdatamodeld in Sources */,
 				1C0C3A34201C565200AA3F61 /* MeetupEvents.swift in Sources */,
 				1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */,
 				2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */,
+				1C0C3A41201CE48800AA3F61 /* MeetEvent.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,12 +475,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1C0C3A35201C585600AA3F61 /* MeetEvent.xcdatamodeld */ = {
+		1C0C3A3F201CE48800AA3F61 /* MeetEvent.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1C0C3A36201C585600AA3F61 /* MeetEvent.xcdatamodel */,
+				1C0C3A40201CE48800AA3F61 /* MeetEvent.xcdatamodel */,
 			);
-			currentVersion = 1C0C3A36201C585600AA3F61 /* MeetEvent.xcdatamodel */;
+			currentVersion = 1C0C3A40201CE48800AA3F61 /* MeetEvent.xcdatamodel */;
 			path = MeetEvent.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

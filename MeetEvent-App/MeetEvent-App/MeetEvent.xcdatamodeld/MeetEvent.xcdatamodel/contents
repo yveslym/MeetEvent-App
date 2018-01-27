@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Categories" representedClassName="Categories" syncable="YES" codeGenerationType="class">
+    <entity name="Categories" representedClassName="Categories" syncable="YES" codeGenerationType="category">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="shortname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sortName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="OpenEvents" representedClassName="OpenEvents" syncable="YES" codeGenerationType="class">
-        <attribute name="address_1" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="OpenEvents" representedClassName="OpenEvents" syncable="YES" codeGenerationType="category">
+        <attribute name="address1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="event_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="OpenEvents" positionX="-63" positionY="-18" width="128" height="165"/>
-        <element name="Categories" positionX="-54" positionY="54" width="128" height="90"/>
+        <element name="Categories" positionX="-45" positionY="0" width="128" height="90"/>
+        <element name="OpenEvents" positionX="-18" positionY="54" width="128" height="180"/>
     </elements>
 </model>
