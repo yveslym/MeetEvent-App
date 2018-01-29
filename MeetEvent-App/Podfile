@@ -7,5 +7,5 @@ target 'MeetEvent-App' do
 
   # Pods for MeetEvent-App
 pod 'Moya'
-
+pod 'Kingfisher'
 end

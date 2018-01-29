@@ -101,9 +101,6 @@
 		2093A7252013C2D300EDC3D7 /* MeetEvent-App */ = {
 			isa = PBXGroup;
 			children = (
-				2093A73A2013C47F00EDC3D7 /* Controllers */,
-				2093A7392013C47200EDC3D7 /* Views */,
-				2093A7382013C46100EDC3D7 /* Models */,
 				2093A7262013C2D300EDC3D7 /* AppDelegate.swift */,
 				2093A72A2013C2D300EDC3D7 /* Main.storyboard */,
 				2093A72D2013C2D300EDC3D7 /* Assets.xcassets */,
@@ -233,12 +230,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
@@ -444,19 +443,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2093A73B2013C50A00EDC3D7 /* User-Interactive.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2093A73C2013C50A00EDC3D7 /* User-Interactive.xcdatamodel */,
-			);
-			currentVersion = 2093A73C2013C50A00EDC3D7 /* User-Interactive.xcdatamodel */;
-			path = "User-Interactive.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2093A71B2013C2D300EDC3D7 /* Project object */;
 }
