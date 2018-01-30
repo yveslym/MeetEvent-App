@@ -21,6 +21,14 @@
 		2093A72E2013C2D300EDC3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2093A72D2013C2D300EDC3D7 /* Assets.xcassets */; };
 		2093A7312013C2D300EDC3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2093A72F2013C2D300EDC3D7 /* LaunchScreen.storyboard */; };
 		20A5B4C6201FDE3B0019E15A /* EventModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4C4201FDE3B0019E15A /* EventModel.xcdatamodeld */; };
+		20A5B4CF202002D80019E15A /* SubCategories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4C7202002D80019E15A /* SubCategories+CoreDataClass.swift */; };
+		20A5B4D0202002D80019E15A /* SubCategories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4C8202002D80019E15A /* SubCategories+CoreDataProperties.swift */; };
+		20A5B4D1202002D80019E15A /* Eventbrite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4C9202002D80019E15A /* Eventbrite+CoreDataClass.swift */; };
+		20A5B4D2202002D80019E15A /* Eventbrite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CA202002D80019E15A /* Eventbrite+CoreDataProperties.swift */; };
+		20A5B4D3202002D80019E15A /* Venue+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CB202002D80019E15A /* Venue+CoreDataClass.swift */; };
+		20A5B4D4202002D80019E15A /* Venue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CC202002D80019E15A /* Venue+CoreDataProperties.swift */; };
+		20A5B4D5202002D80019E15A /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CD202002D80019E15A /* Category+CoreDataClass.swift */; };
+		20A5B4D6202002D80019E15A /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CE202002D80019E15A /* Category+CoreDataProperties.swift */; };
 		A7B41CBE099DC0F692C044F8 /* Pods_MeetEvent_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF85408895F37DF7087498DB /* Pods_MeetEvent_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +49,14 @@
 		2093A7302013C2D300EDC3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2093A7322013C2D300EDC3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A5B4C5201FDE3B0019E15A /* EventModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventModel.xcdatamodel; sourceTree = "<group>"; };
+		20A5B4C7202002D80019E15A /* SubCategories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategories+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20A5B4C8202002D80019E15A /* SubCategories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategories+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20A5B4C9202002D80019E15A /* Eventbrite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eventbrite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20A5B4CA202002D80019E15A /* Eventbrite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eventbrite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20A5B4CB202002D80019E15A /* Venue+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20A5B4CC202002D80019E15A /* Venue+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20A5B4CD202002D80019E15A /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20A5B4CE202002D80019E15A /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DF85408895F37DF7087498DB /* Pods_MeetEvent_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetEvent_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA072E9C6AA6A4E022C59DE /* Pods-MeetEvent-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetEvent-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App.release.xcconfig"; sourceTree = "<group>"; };
 		F60A8E1E84320ACCF04E1E6A /* Pods-MeetEvent-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetEvent-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +104,14 @@
 		1C28253220150DC800C187D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				20A5B4C7202002D80019E15A /* SubCategories+CoreDataClass.swift */,
+				20A5B4C8202002D80019E15A /* SubCategories+CoreDataProperties.swift */,
+				20A5B4C9202002D80019E15A /* Eventbrite+CoreDataClass.swift */,
+				20A5B4CA202002D80019E15A /* Eventbrite+CoreDataProperties.swift */,
+				20A5B4CB202002D80019E15A /* Venue+CoreDataClass.swift */,
+				20A5B4CC202002D80019E15A /* Venue+CoreDataProperties.swift */,
+				20A5B4CD202002D80019E15A /* Category+CoreDataClass.swift */,
+				20A5B4CE202002D80019E15A /* Category+CoreDataProperties.swift */,
 				1C28253320150DD700C187D9 /* MeetupCategories.swift */,
 				1C0C3A33201C565200AA3F61 /* MeetupEvents.swift */,
 				20A5B4C4201FDE3B0019E15A /* EventModel.xcdatamodeld */,
@@ -282,13 +306,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A5B4D0202002D80019E15A /* SubCategories+CoreDataProperties.swift in Sources */,
+				20A5B4D2202002D80019E15A /* Eventbrite+CoreDataProperties.swift in Sources */,
+				20A5B4D4202002D80019E15A /* Venue+CoreDataProperties.swift in Sources */,
+				20A5B4D1202002D80019E15A /* Eventbrite+CoreDataClass.swift in Sources */,
 				1C0C3A32201C31D800AA3F61 /* EventManager.swift in Sources */,
 				1C0C3A30201C2BED00AA3F61 /* NetworkAdapter.swift in Sources */,
 				1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */,
+				20A5B4D5202002D80019E15A /* Category+CoreDataClass.swift in Sources */,
 				1C0C3A2E201C1C3B00AA3F61 /* Client-API.swift in Sources */,
+				20A5B4CF202002D80019E15A /* SubCategories+CoreDataClass.swift in Sources */,
 				2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */,
 				1C0C3A3A201C5B3000AA3F61 /* CoreDataStack.swift in Sources */,
 				1C0C3A34201C565200AA3F61 /* MeetupEvents.swift in Sources */,
+				20A5B4D3202002D80019E15A /* Venue+CoreDataClass.swift in Sources */,
+				20A5B4D6202002D80019E15A /* Category+CoreDataProperties.swift in Sources */,
 				1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */,
 				20A5B4C6201FDE3B0019E15A /* EventModel.xcdatamodeld in Sources */,
 				2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */,

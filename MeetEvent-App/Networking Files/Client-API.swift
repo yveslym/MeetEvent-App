@@ -16,38 +16,57 @@ enum Events {
 //    case likes(id:Int)
       case meetupCategories( page: Int, key: String)
       case meetupEvents(key: String, page: Int, topic: String)
+      case searchEventbrite(categoryID: Int,subCategoryID: Int, location: String, distance: String)
+      case eventbriteVenue(venueID: Int)
+      case eventbriteLogo(logoID: Int)
+      case eventbriteCategories
+    case eventbriteSubCategories(categoryID: Int)
+    
 }
 extension Events: TargetType {
+    
     var baseURL: URL {
-        var baseURL = URL(string: "https://api.meetup.com")
-        return baseURL!
+        switch self{
+        case .meetupCategories, .meetupEvents: return URL(string: "https://api.meetup.com")!
+        
+        case .searchEventbrite, .eventbriteVenue, .eventbriteLogo, .eventbriteCategories,  .eventbriteSubCategories :
+            return URL(string: "https://www.eventbriteapi.com")!
+        }
     }
     
     var path: String {
         switch self {
-        case .meetupCategories:
-             return "/2/categories"
-        case .meetupEvents:
-            return "/2/open_events"
+        case .meetupCategories: return "/2/categories"
+            
+        case .meetupEvents: return "/2/open_events"
+            
+        case .searchEventbrite:  return "/v3/events/search/"
+           
+        case .eventbriteVenue(let venueID):  return "/v3/venues/\(venueID)/"
+        
+        case .eventbriteLogo(let logoID): return "/v3/media/\(logoID)/"
+            
+        case .eventbriteCategories:  return "/v3/categories/"
+            
+        case .eventbriteSubCategories(let categoryID): return "/v3/categories/\(categoryID)/"
         }
     
     }
     
     var method: Moya.Method {
         switch self {
-        case .meetupCategories:
-            return .get
-        case .meetupEvents:
+        case .meetupCategories, .meetupEvents, .searchEventbrite, .eventbriteVenue, .eventbriteLogo, .eventbriteCategories, .eventbriteSubCategories:
             return .get
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .meetupCategories: fallthrough
-        case .meetupEvents: return "{}".data(using: String.Encoding.utf8)!
             
-        }
+case .meetupCategories, .searchEventbrite, .eventbriteVenue,
+     .eventbriteLogo, .eventbriteCategories, .eventbriteSubCategories, .meetupEvents:
+    
+    return "{}".data(using: String.Encoding.utf8)!
     }
     
     var task: Task {
@@ -55,8 +74,19 @@ extension Events: TargetType {
             
         case .meetupCategories( let page, let key):
             return .requestParameters(parameters: ["sign": "true", "page": page, "key": key], encoding: URLEncoding.default)
+            
         case .meetupEvents(let page, let key, let topic):
             return .requestParameters(parameters: ["key": key, "topic": topic], encoding: URLEncoding.default)
+        case .searchEventbrite(let categoryID, let subCategoryID, let location, let distance):
+            <#code#>
+        case .eventbriteVenue(let venueID):
+            <#code#>
+        case .eventbriteLogo(let logoID):
+            <#code#>
+        case .eventbriteCategories:
+            <#code#>
+        case .eventbriteSubCategories(let categoryID):
+            <#code#>
         }
     }
     
@@ -64,6 +94,16 @@ extension Events: TargetType {
         switch self{
         case .meetupCategories: fallthrough
         case .meetupEvents: return [:]
+        case .searchEventbrite(let categoryID, let subCategoryID, let location, let distance):
+            <#code#>
+        case .eventbriteVenue(let venueID):
+            <#code#>
+        case .eventbriteLogo(let logoID):
+            <#code#>
+        case .eventbriteCategories:
+            <#code#>
+        case .eventbriteSubCategories(let categoryID):
+            <#code#>
         }
     }
     
