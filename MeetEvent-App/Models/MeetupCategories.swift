@@ -41,28 +41,5 @@ import CoreData
 //    let results:[MeetupCategories]
 //}
 
-@objc(Categories)
-public class Categories: NSManagedObject, Decodable {
-    enum FirstLayerKeys: String, CodingKey {
-        case name, shortName, sortName = "sort_name"
-    }
-//
-    convenience required public init(from decoder: Decoder) throws {
-        let privateContext = CoreDataStack.singletonInstance.privateContext
-        guard let entity = NSEntityDescription.entity(forEntityName: "Categories", in: privateContext) else {
-            fatalError()
-        }
-        self.init(entity: entity, insertInto: privateContext)
-        let container = try decoder.container(keyedBy: FirstLayerKeys.self)
-        self.name = try container.decodeIfPresent(String.self, forKey: .name)
-        self.shortName = try container.decodeIfPresent(String.self, forKey: .shortName)
-        self.sortName = try container.decodeIfPresent(String.self, forKey: .sortName)
-        
-    }
-
-}
-
-
-
 
 

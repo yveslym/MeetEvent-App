@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Moya
+import Moya_ModelMapper
 
 struct NetworkAdapter{
     static let provider = MoyaProvider<Events>()
@@ -20,11 +21,12 @@ struct NetworkAdapter{
             case .success(let response):
                 if response.statusCode >= 200 && response.statusCode <= 300{
                     return successCallBack(response)
+                    
                 }
                 else{
                     //fatalError("code error not api")
                     let resp = String(data: response.data, encoding: .utf8)
-                    print(resp)
+                    print(resp!)
                 }
             case .failure(let error):
                 errorCallBack(error)

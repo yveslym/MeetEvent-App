@@ -14,7 +14,7 @@ public class CoreDataStack {
     static let singletonInstance = CoreDataStack()
     
     private lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "MeetEvent")
+        let container = NSPersistentContainer(name: "EventModel")
         container.loadPersistentStores(completionHandler: { (completionHandler, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved Error \(error), \(error.localizedDescription)")

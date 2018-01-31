@@ -13,4 +13,5 @@ import CoreData
 @objc(SubCategories)
 public class SubCategories: NSManagedObject {
 
+    
 }

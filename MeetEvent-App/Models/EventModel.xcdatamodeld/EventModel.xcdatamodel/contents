@@ -21,8 +21,9 @@
         <attribute name="organizerID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subCategoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="venueID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eventbrite" syncable="YES"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Venue" inverseName="eventbrite" inverseEntity="Venue" syncable="YES"/>
     </entity>
     <entity name="SubCategories" representedClassName="SubCategories" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -39,12 +40,12 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="eventbrite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eventbrite" syncable="YES"/>
+        <relationship name="eventbrite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Eventbrite" inverseName="venue" inverseEntity="Eventbrite" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Eventbrite" positionX="-63" positionY="-18" width="128" height="285"/>
-        <element name="Venue" positionX="-54" positionY="99" width="128" height="195"/>
         <element name="Category" positionX="-36" positionY="126" width="128" height="105"/>
+        <element name="Eventbrite" positionX="-63" positionY="-18" width="128" height="300"/>
         <element name="SubCategories" positionX="-18" positionY="135" width="128" height="90"/>
+        <element name="Venue" positionX="-54" positionY="99" width="128" height="195"/>
     </elements>
 </model>

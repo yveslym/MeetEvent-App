@@ -6,6 +6,7 @@ target 'MeetEvent-App' do
   use_frameworks!
 
   # Pods for MeetEvent-App
-pod 'Moya'
+#pod 'Moya'
 pod 'Kingfisher'
+pod 'Moya-ModelMapper'
 end

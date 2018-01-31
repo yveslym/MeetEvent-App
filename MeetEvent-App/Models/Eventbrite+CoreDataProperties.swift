@@ -32,6 +32,8 @@ extension Eventbrite {
     @NSManaged public var logoID: Int32
     @NSManaged public var organizerID: Int32
     @NSManaged public var logoUrl: String?
-    @NSManaged public var venue: Eventbrite?
+    @NSManaged public var venue: Venue?
+     @NSManaged public var subCategoryID: Int32
+    
 
 }

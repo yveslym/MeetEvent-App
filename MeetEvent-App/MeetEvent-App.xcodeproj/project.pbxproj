@@ -12,9 +12,9 @@
 		1C0C3A32201C31D800AA3F61 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A31201C31D800AA3F61 /* EventManager.swift */; };
 		1C0C3A34201C565200AA3F61 /* MeetupEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A33201C565200AA3F61 /* MeetupEvents.swift */; };
 		1C0C3A3A201C5B3000AA3F61 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A39201C5B3000AA3F61 /* CoreDataStack.swift */; };
-		1C0C3A41201CE48800AA3F61 /* MeetEvent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A3F201CE48800AA3F61 /* MeetEvent.xcdatamodeld */; };
 		1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28253320150DD700C187D9 /* MeetupCategories.swift */; };
 		1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */; };
+		20773BBA2021C03A00564FEA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20773BB92021C03A00564FEA /* String+Extensions.swift */; };
 		2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7262013C2D300EDC3D7 /* AppDelegate.swift */; };
 		2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7282013C2D300EDC3D7 /* ViewController.swift */; };
 		2093A72C2013C2D300EDC3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2093A72A2013C2D300EDC3D7 /* Main.storyboard */; };
@@ -29,6 +29,7 @@
 		20A5B4D4202002D80019E15A /* Venue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CC202002D80019E15A /* Venue+CoreDataProperties.swift */; };
 		20A5B4D5202002D80019E15A /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CD202002D80019E15A /* Category+CoreDataClass.swift */; };
 		20A5B4D6202002D80019E15A /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CE202002D80019E15A /* Category+CoreDataProperties.swift */; };
+		20A5B4D820204FF30019E15A /* EventConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4D720204FF30019E15A /* EventConfiguration.swift */; };
 		A7B41CBE099DC0F692C044F8 /* Pods_MeetEvent_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF85408895F37DF7087498DB /* Pods_MeetEvent_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +39,9 @@
 		1C0C3A31201C31D800AA3F61 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		1C0C3A33201C565200AA3F61 /* MeetupEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupEvents.swift; sourceTree = "<group>"; };
 		1C0C3A39201C5B3000AA3F61 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		1C0C3A40201CE48800AA3F61 /* MeetEvent.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeetEvent.xcdatamodel; sourceTree = "<group>"; };
 		1C28253320150DD700C187D9 /* MeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCategories.swift; sourceTree = "<group>"; };
 		1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObtainMeetupCategories.swift; sourceTree = "<group>"; };
+		20773BB92021C03A00564FEA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		2093A7232013C2D300EDC3D7 /* MeetEvent-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MeetEvent-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2093A7262013C2D300EDC3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2093A7282013C2D300EDC3D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		20A5B4CC202002D80019E15A /* Venue+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		20A5B4CD202002D80019E15A /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		20A5B4CE202002D80019E15A /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20A5B4D720204FF30019E15A /* EventConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventConfiguration.swift; sourceTree = "<group>"; };
 		DF85408895F37DF7087498DB /* Pods_MeetEvent_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetEvent_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA072E9C6AA6A4E022C59DE /* Pods-MeetEvent-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetEvent-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App.release.xcconfig"; sourceTree = "<group>"; };
 		F60A8E1E84320ACCF04E1E6A /* Pods-MeetEvent-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetEvent-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				1C0C3A2D201C1C3B00AA3F61 /* Client-API.swift */,
 				1C0C3A2F201C2BED00AA3F61 /* NetworkAdapter.swift */,
 				1C0C3A31201C31D800AA3F61 /* EventManager.swift */,
+				20A5B4D720204FF30019E15A /* EventConfiguration.swift */,
 			);
 			path = "Networking Files";
 			sourceTree = "<group>";
@@ -128,9 +131,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		20773BB82021C02200564FEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				20773BB92021C03A00564FEA /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2093A71A2013C2D300EDC3D7 = {
 			isa = PBXGroup;
 			children = (
+				20773BB82021C02200564FEA /* Extensions */,
 				1C0C3A38201C5ABA00AA3F61 /* Helpers */,
 				1C28253220150DC800C187D9 /* Models */,
 				1C28253120150DBD00C187D9 /* Networking Files */,
@@ -158,7 +170,6 @@
 				2093A72D2013C2D300EDC3D7 /* Assets.xcassets */,
 				2093A72F2013C2D300EDC3D7 /* LaunchScreen.storyboard */,
 				2093A7322013C2D300EDC3D7 /* Info.plist */,
-				1C0C3A3F201CE48800AA3F61 /* MeetEvent.xcdatamodeld */,
 			);
 			path = "MeetEvent-App";
 			sourceTree = "<group>";
@@ -284,14 +295,18 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MeetEvent-App/Pods-MeetEvent-App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +321,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20773BBA2021C03A00564FEA /* String+Extensions.swift in Sources */,
 				20A5B4D0202002D80019E15A /* SubCategories+CoreDataProperties.swift in Sources */,
+				20A5B4D820204FF30019E15A /* EventConfiguration.swift in Sources */,
 				20A5B4D2202002D80019E15A /* Eventbrite+CoreDataProperties.swift in Sources */,
 				20A5B4D4202002D80019E15A /* Venue+CoreDataProperties.swift in Sources */,
 				20A5B4D1202002D80019E15A /* Eventbrite+CoreDataClass.swift in Sources */,
@@ -324,7 +341,6 @@
 				1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */,
 				20A5B4C6201FDE3B0019E15A /* EventModel.xcdatamodeld in Sources */,
 				2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */,
-				1C0C3A41201CE48800AA3F61 /* MeetEvent.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,16 +529,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1C0C3A3F201CE48800AA3F61 /* MeetEvent.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1C0C3A40201CE48800AA3F61 /* MeetEvent.xcdatamodel */,
-			);
-			currentVersion = 1C0C3A40201CE48800AA3F61 /* MeetEvent.xcdatamodel */;
-			path = MeetEvent.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		20A5B4C4201FDE3B0019E15A /* EventModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
