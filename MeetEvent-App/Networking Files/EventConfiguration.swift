@@ -10,7 +10,8 @@ import Foundation
 struct EventConfig{
     
     /// Method to configure the api eventbrite api key
+    static var eventBriteKey: String?
     static func eventBriteKeyConfig(apiKey: String){
-        
+        eventBriteKey = apiKey
     }
 }

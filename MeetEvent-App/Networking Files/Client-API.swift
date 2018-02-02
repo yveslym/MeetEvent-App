@@ -32,23 +32,23 @@ extension Events: TargetType {
         case .meetupCategories( let page, let key):
             return .requestParameters(parameters: ["sign": "true", "page": page, "key": key], encoding: URLEncoding.default)
             
-        case .meetupEvents(let page, let key, let topic):
+        case .meetupEvents(_, let key, let topic):
             return .requestParameters(parameters: ["key": key, "topic": topic], encoding: URLEncoding.default)
             
         case .searchEventbrite(let categoryID, let subCategoryID, let location, let distance):
-            return .requestParameters(parameters: ["location.address": location, "token": "OAVCFFJSZ22ZYMLLU2R7", "categories": categoryID, "subcategories": subCategoryID, "location.within": distance], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["location.address": location, "token": EventConfig.eventBriteKey!, "categories": categoryID, "subcategories": subCategoryID, "location.within": distance], encoding: URLEncoding.default)
             
         case .eventbriteVenue:
-            return .requestParameters(parameters: ["token": "token"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["token": EventConfig.eventBriteKey!], encoding: URLEncoding.default)
             
         case .eventbriteLogo:
-            return .requestParameters(parameters: ["token": "OAVCFFJSZ22ZYMLLU2R7"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["token": EventConfig.eventBriteKey!], encoding: URLEncoding.default)
             
         case .eventbriteCategories:
-            return .requestParameters(parameters: ["token": "token"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["token": EventConfig.eventBriteKey!], encoding: URLEncoding.default)
             
         case .eventbriteSubCategories:
-            return .requestParameters(parameters: ["token": "token"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["token": EventConfig.eventBriteKey!], encoding: URLEncoding.default)
         }
     }
     

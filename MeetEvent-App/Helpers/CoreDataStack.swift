@@ -6,48 +6,78 @@
 //  Copyright © 2018 Yveslym. All rights reserved.
 //
 
+
 import Foundation
-import UIKit
 import CoreData
 
-public class CoreDataStack {
-    static let singletonInstance = CoreDataStack()
+
+class CoreDataStack{
+    static var singletonInstance = CoreDataStack()
     
-    private lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "EventModel")
-        container.loadPersistentStores(completionHandler: { (completionHandler, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved Error \(error), \(error.localizedDescription)")
+    private lazy var persistanceContainer: NSPersistentContainer = {
+        let contenainer = NSPersistentContainer(name: "EventModel")
+        contenainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError?{
+                fatalError("Unresolved error \(error), \(error.userInfo)") // need to be change
             }
         })
-        return container
+        return contenainer
     }()
     
-    lazy var viewContext: NSManagedObjectContext = {
-        let viewContext = persistentContainer.viewContext
-        // Linking the view contexts persistent store to the official persistent store coordinator
-        viewContext.persistentStoreCoordinator = persistentContainer.persistentStoreCoordinator
-        return viewContext
+    lazy var viewContext:NSManagedObjectContext = {
+        let context = persistanceContainer.viewContext
+        return context
     }()
     
     lazy var privateContext: NSManagedObjectContext = {
-        let privateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        
-        // Linking the private contexts persistent store coordinator to the official persistent store coordinators
-        privateContext.persistentStoreCoordinator = persistentContainer.persistentStoreCoordinator
-        return privateContext
+        return persistanceContainer.newBackgroundContext()
     }()
     
-    func saveTo(context: NSManagedObjectContext) {
-        if context.hasChanges {
-            do {
-                print("The changes were made to the saved to the context")
+    func saveTo(context: NSManagedObjectContext){
+        if context.hasChanges{
+            do{
                 try context.save()
             }
-            catch {
-                let error = error as NSError?
-                fatalError("Could not save changes \(error?.localizedDescription), \(error)")
+            catch{
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                // need to change by the alert view
             }
         }
     }
+    
+    func delete(context: NSManagedObjectContext, item: NSManagedObject){
+        context.delete(item)
+        saveTo(context: context)
+    }
+    
+    
+    func fetchRecordsForEntity(_ entity: Entity, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> [NSManagedObject] {
+        // Create Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.rawValue)
+        
+        // Helpers
+        var result = [NSManagedObject]()
+        
+        do {
+            // Execute Fetch Request
+            let records = try managedObjectContext.fetch(fetchRequest)
+            
+            if let records = records as? [NSManagedObject] {
+                result = records
+            }
+            
+        } catch {
+            print("Unable to fetch managed objects for entity \(entity).")
+        }
+        
+        return result
+    }
+    
 }
+enum Entity: String{
+    case Eventbrite
+    case MeetUp
+    case User    
+}
+

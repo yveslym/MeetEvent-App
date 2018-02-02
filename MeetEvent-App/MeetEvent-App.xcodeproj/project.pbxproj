@@ -14,6 +14,8 @@
 		1C0C3A3A201C5B3000AA3F61 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A39201C5B3000AA3F61 /* CoreDataStack.swift */; };
 		1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C28253320150DD700C187D9 /* MeetupCategories.swift */; };
 		1C28253A2015138C00C187D9 /* ObtainMeetupCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */; };
+		200561FD202505C200582BCD /* Eventbrite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200561FB202505C200582BCD /* Eventbrite+CoreDataClass.swift */; };
+		200561FE202505C200582BCD /* Eventbrite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200561FC202505C200582BCD /* Eventbrite+CoreDataProperties.swift */; };
 		20773BBA2021C03A00564FEA /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20773BB92021C03A00564FEA /* String+Extensions.swift */; };
 		2093A7272013C2D300EDC3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7262013C2D300EDC3D7 /* AppDelegate.swift */; };
 		2093A7292013C2D300EDC3D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2093A7282013C2D300EDC3D7 /* ViewController.swift */; };
@@ -23,8 +25,6 @@
 		20A5B4C6201FDE3B0019E15A /* EventModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4C4201FDE3B0019E15A /* EventModel.xcdatamodeld */; };
 		20A5B4CF202002D80019E15A /* SubCategories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4C7202002D80019E15A /* SubCategories+CoreDataClass.swift */; };
 		20A5B4D0202002D80019E15A /* SubCategories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4C8202002D80019E15A /* SubCategories+CoreDataProperties.swift */; };
-		20A5B4D1202002D80019E15A /* Eventbrite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4C9202002D80019E15A /* Eventbrite+CoreDataClass.swift */; };
-		20A5B4D2202002D80019E15A /* Eventbrite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CA202002D80019E15A /* Eventbrite+CoreDataProperties.swift */; };
 		20A5B4D3202002D80019E15A /* Venue+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CB202002D80019E15A /* Venue+CoreDataClass.swift */; };
 		20A5B4D4202002D80019E15A /* Venue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CC202002D80019E15A /* Venue+CoreDataProperties.swift */; };
 		20A5B4D5202002D80019E15A /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5B4CD202002D80019E15A /* Category+CoreDataClass.swift */; };
@@ -41,6 +41,8 @@
 		1C0C3A39201C5B3000AA3F61 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		1C28253320150DD700C187D9 /* MeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetupCategories.swift; sourceTree = "<group>"; };
 		1C2825392015138C00C187D9 /* ObtainMeetupCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObtainMeetupCategories.swift; sourceTree = "<group>"; };
+		200561FB202505C200582BCD /* Eventbrite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eventbrite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		200561FC202505C200582BCD /* Eventbrite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eventbrite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		20773BB92021C03A00564FEA /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		2093A7232013C2D300EDC3D7 /* MeetEvent-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MeetEvent-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2093A7262013C2D300EDC3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		20A5B4C5201FDE3B0019E15A /* EventModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventModel.xcdatamodel; sourceTree = "<group>"; };
 		20A5B4C7202002D80019E15A /* SubCategories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategories+CoreDataClass.swift"; sourceTree = "<group>"; };
 		20A5B4C8202002D80019E15A /* SubCategories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategories+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		20A5B4C9202002D80019E15A /* Eventbrite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eventbrite+CoreDataClass.swift"; sourceTree = "<group>"; };
-		20A5B4CA202002D80019E15A /* Eventbrite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Eventbrite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		20A5B4CB202002D80019E15A /* Venue+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataClass.swift"; sourceTree = "<group>"; };
 		20A5B4CC202002D80019E15A /* Venue+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		20A5B4CD202002D80019E15A /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -107,10 +107,10 @@
 		1C28253220150DC800C187D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				200561FB202505C200582BCD /* Eventbrite+CoreDataClass.swift */,
+				200561FC202505C200582BCD /* Eventbrite+CoreDataProperties.swift */,
 				20A5B4C7202002D80019E15A /* SubCategories+CoreDataClass.swift */,
 				20A5B4C8202002D80019E15A /* SubCategories+CoreDataProperties.swift */,
-				20A5B4C9202002D80019E15A /* Eventbrite+CoreDataClass.swift */,
-				20A5B4CA202002D80019E15A /* Eventbrite+CoreDataProperties.swift */,
 				20A5B4CB202002D80019E15A /* Venue+CoreDataClass.swift */,
 				20A5B4CC202002D80019E15A /* Venue+CoreDataProperties.swift */,
 				20A5B4CD202002D80019E15A /* Category+CoreDataClass.swift */,
@@ -321,12 +321,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200561FD202505C200582BCD /* Eventbrite+CoreDataClass.swift in Sources */,
+				200561FE202505C200582BCD /* Eventbrite+CoreDataProperties.swift in Sources */,
 				20773BBA2021C03A00564FEA /* String+Extensions.swift in Sources */,
 				20A5B4D0202002D80019E15A /* SubCategories+CoreDataProperties.swift in Sources */,
 				20A5B4D820204FF30019E15A /* EventConfiguration.swift in Sources */,
-				20A5B4D2202002D80019E15A /* Eventbrite+CoreDataProperties.swift in Sources */,
 				20A5B4D4202002D80019E15A /* Venue+CoreDataProperties.swift in Sources */,
-				20A5B4D1202002D80019E15A /* Eventbrite+CoreDataClass.swift in Sources */,
 				1C0C3A32201C31D800AA3F61 /* EventManager.swift in Sources */,
 				1C0C3A30201C2BED00AA3F61 /* NetworkAdapter.swift in Sources */,
 				1C28253420150DD700C187D9 /* MeetupCategories.swift in Sources */,
