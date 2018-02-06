@@ -15,7 +15,7 @@ from bson.json_util import dumps
 app = Flask(__name__)
 
 
-client = MongoClient('mongodb://matthewHarrilal:matthewharrilal1@ds119088.mlab.com:19088/meet_event_development')
+client = MongoClient('mongodb://localhost:27017/')
 app.db = client.meet_event_development
 database = app.db
 rounds = app.bcrypt_rounds = 5
@@ -32,8 +32,8 @@ def authenticated_request(func):
         email,password = decode(auth_code)
 
         if email is not None and password is not None:
-            user_collection = database.orchard_collection
-            user = user_collection.find_one({'email': email})
+            users_collection = database.users_collection
+            user = users_collection.find_one({'email': auth.username})
             if user is not None:
                 encoded_password = password.encode('utf-8')
                 if bcrypt.checkpw(encoded_password, user['password']):
@@ -59,7 +59,7 @@ class User(Resource):
         auth = request.authorization
 
         # So now that we have the credentials we have to see if the user exists
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = users_collection.find_one({'email': auth.username})
 
         # Now that I have searched for them I have to see if they exist
         if user_find is not None:
@@ -69,24 +69,30 @@ class User(Resource):
 
     def post(self):
         # This function sends the user to the database 
-
+        # pdb.set_trace()
         requested_json = request.json
 
         # We access headers headers through request.authorization and the body through request.json
-        requested_password = request.json['password']
-
+        
+       
         # Encodes password into a sanitized format
-        encoded_password = requested_password.encode("utf-8")
+        encoded_password = requested_json['password'].encode("utf-8")
 
         # Based on the number of rounds we give it we run the encrpytion algorithm
         # against the encoded password
         hashed_password = bcrypt.hashpw(encoded_password, bcrypt.gensalt(rounds))
 
+        user_find = users_collection.find_one({'email': requested_json['email']})
+
         # So updating value of old string password with new hashed password
-        requested_password = hashed_password
+        requested_json['password'] = hashed_password
+        pdb.set_trace()
 
         # Make sure users give us email and password
-        if 'email' in requested_json and 'password' in requested_json:
+        if user_find is not None:
+            error_statement = "The users has already been posted"
+            return error_statement, 400, None
+        elif 'email' in requested_json and 'password' in requested_json:
             users_collection.insert_one(requested_json)
             requested_json.pop('password')
             print("User has succesfully been posted")
@@ -97,11 +103,13 @@ class User(Resource):
         # This function is going to be the function that deletes users
         # First we have to make sure that the user exists before we can delete them
         auth = request.authorization
+        # pdb.set_trace()
 
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = users_collection.find_one({'email': auth.username})
 
         if user_find is not None:
-            user_collection.remove(user_find)
+            users_collection.remove(user_find)
+            user_find.pop('password')
             return user_find, 204, None
 
             
@@ -114,7 +122,7 @@ class Categories(Resource):
         # First we have to make sure the user is logged in before they can post categories
         auth = request.authorization
 
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = users_collection.find_one({'email': auth.username})
         requested_json = request.json
         category_collection = db.category_collection
 
@@ -144,7 +152,7 @@ class Categories(Resource):
         # First we have to make sure that the user is logged in
         auth = request.authorization
 
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = users_collection.find_one({'email': auth.username})
 
         if user_find is not None:
             print('The user categories has been successfully fetched')
@@ -157,7 +165,7 @@ class UserFavoriteEvents(Resource):
         '''This is going to be the function that sends  the users liked events to the database'''
         auth = request.authorization
         requested_json = request.json
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = users_collection.find_one({'email': auth.username})
         event_collection = db.event_collection
 
         if user_find is not None and 'email' in requested_json and 'favorited_event' in requested_json:
@@ -170,7 +178,7 @@ class UserFavoriteEvents(Resource):
         ''' This is the function that fetches the users favorited events'''
         auth = request.authorization
 
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = users_collection.find_one({'email': auth.username})
 
         event_collection = db.event_collection
 
@@ -190,7 +198,7 @@ class UserFavoriteEvents(Resource):
 
         requested_parameters = request.args
 
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = users_collection.find_one({'email': auth.username})
 
         event_collection = db.event_collection
 
@@ -208,6 +216,7 @@ class UserFavoriteEvents(Resource):
 
     
 api.add_resource(User, "/users")
+api.add_resource(UserFavoriteEvents, "/favorited_events")
 
 @api.representation('application/json')
 def output_json(data, code, headers=None):
