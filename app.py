@@ -124,12 +124,11 @@ class Categories(Resource):
 
         user_find = users_collection.find_one({'email': auth.username})
         requested_json = request.json
-        category_collection = db.category_collection
+        category_collection = database.category_collection
 
         if 'email' in requested_json and 'categories' in requested_json and user_find is not None:
-            user_find['email'] = requested_json['email']
-            user_find["categories"] = requested_json['categories']
-            return user_find, 201, None
+            category_collection.insert_one(requested_json)
+            return requested_json, 201, None
 
     @authenticated_request
     def patch(self):
@@ -138,25 +137,32 @@ class Categories(Resource):
         auth = request.authorization
 
         user_find = users_collection.find_one({'email': auth.username})
-        requested_params = request.args
+        category_collection = database.category_collection
+        category_find = category_collection.find_one({'email': auth.username})
+        requested_json = request.json
         
-
-        if user_find is not None:
-            user_find['categories'] = None
-            user_find.pop('password')
-            return user_find, 204, None
+        if user_find is not None and category_find is not None and 'email' in requested_json and 'categories' in requested_json:
+            category_find['categories'] = requested_json['categories']
+            category_collection.save(category_find)
+            return category_find, 204, None
 
     @authenticated_request
     def get(self):
         '''This is the function that is going to fetch users categories'''
         # First we have to make sure that the user is logged in
         auth = request.authorization
-
+        # pdb.set_trace()
         user_find = users_collection.find_one({'email': auth.username})
+        category_collection = database.category_collection
+        category_find = category_collection.find_one({'email': auth.username})
 
         if user_find is not None:
-            print('The user categories has been successfully fetched')
-            return user_find, 200, None
+            if category_find is not None:
+                print('The user categories has been successfully fetched')
+                return category_find, 200, None
+            elif category_find is None:
+                print("No categories")
+                return None, 200,None
 
 
 class UserFavoriteEvents(Resource):
@@ -166,9 +172,9 @@ class UserFavoriteEvents(Resource):
         auth = request.authorization
         requested_json = request.json
         user_find = users_collection.find_one({'email': auth.username})
-        event_collection = db.event_collection
+        event_collection = database.event_collection
 
-        if user_find is not None and 'email' in requested_json and 'favorited_event' in requested_json:
+        if user_find is not None and 'email' in requested_json and 'id' in requested_json:
             event_collection.insert_one(requested_json)
             print('The users favorited events has been posted to the database')
             return requested_json, 201, None
@@ -180,7 +186,7 @@ class UserFavoriteEvents(Resource):
 
         user_find = users_collection.find_one({'email': auth.username})
 
-        event_collection = db.event_collection
+        event_collection = database.event_collection
 
         event_find = event_collection.find_one({'email': auth.username})
 
@@ -191,23 +197,24 @@ class UserFavoriteEvents(Resource):
             elif event_find is None:
                 no_event_found = ('The user is existent but does not have any favorited events')
                 return (no_event_found, 200, None)
+   
     @authenticated_request
     def delete(self):
         ''' This is the function that deletes a user favorited events or dislikes them'''
         auth = request.authorization
 
-        requested_parameters = request.args
+        requested_json = request.json
 
         user_find = users_collection.find_one({'email': auth.username})
 
-        event_collection = db.event_collection
+        event_collection = database.event_collection
+        pdb.set_trace()
+        event_find = event_collection.find_one({'email': auth.username, 'id': requested_json['id']})
+        
 
-        event_find = event_collection.find_one({'email': auth.username})
-
-        if user_find is not None and event_find is not None:
-            event_collection.remove(event_find[requested_parameters['favorited_event']])
-            print('The users specific favorited event has been deleted')
-            return event_collection, 204, None
+        if 'id' in requested_json and 'email' in requested_json and event_find is not None:
+            event_collection.remove(event_find)
+            return event_find, 204, None
 
    
         
@@ -217,6 +224,7 @@ class UserFavoriteEvents(Resource):
     
 api.add_resource(User, "/users")
 api.add_resource(UserFavoriteEvents, "/favorited_events")
+api.add_resource(Categories, "/categories")
 
 @api.representation('application/json')
 def output_json(data, code, headers=None):
