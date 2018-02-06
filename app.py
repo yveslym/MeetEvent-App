@@ -124,15 +124,19 @@ class Categories(Resource):
             return user_find, 201, None
 
     @authenticated_request
-    def delete(self):
+    def patch(self):
         '''This is the function that is going to delete the users interested_categories'''
         # First we have to make sure that the user is logged in
         auth = request.authorization
 
         user_find = users_collection.find_one({'email': auth.username})
+        requested_params = request.args
         
 
-        if user_find is not None and :
+        if user_find is not None:
+            user_find['categories'] = None
+            user_find.pop('password')
+            return user_find
 
             
 
