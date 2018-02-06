@@ -136,10 +136,75 @@ class Categories(Resource):
         if user_find is not None:
             user_find['categories'] = None
             user_find.pop('password')
-            return user_find
+            return user_find, 204, None
+
+    @authenticated_request
+    def get(self):
+        '''This is the function that is going to fetch users categories'''
+        # First we have to make sure that the user is logged in
+        auth = request.authorization
+
+        user_find = user_collection.find_one({'email': auth.username})
+
+        if user_find is not None:
+            print('The user categories has been successfully fetched')
+            return user_find, 200, None
+
+
+class UserFavoriteEvents(Resource):
+    @authenticated_request
+    def post(self):
+        '''This is going to be the function that sends  the users liked events to the database'''
+        auth = request.authorization
+        requested_json = request.json
+        user_find = user_collection.find_one({'email': auth.username})
+        event_collection = db.event_collection
+
+        if user_find is not None and 'email' in requested_json and 'favorited_event' in requested_json:
+            event_collection.insert_one(requested_json)
+            print('The users favorited events has been posted to the database')
+            return requested_json, 201, None
+
+    @authenticated_request
+    def get(self):
+        ''' This is the function that fetches the users favorited events'''
+        auth = request.authorization
+
+        user_find = user_collection.find_one({'email': auth.username})
+
+        event_collection = db.event_collection
+
+        event_find = event_collection.find_one({'email': auth.username})
+
+        if user_find is not None:
+            if event_find is not None:
+                success_statement = ('The users favorited events have not been returned ')
+                return event_find,200, None, success_statement
+            elif event_find is None:
+                no_event_found = ('The user is existent but does not have any favorited events')
+                return (no_event_found, 200, None)
+    @authenticated_request
+    def delete(self):
+        ''' This is the function that deletes a user favorited events or dislikes them'''
+        auth = request.authorization
+
+        requested_parameters = request.args
+
+        user_find = user_collection.find_one({'email': auth.username})
+
+        event_collection = db.event_collection
+
+        event_find = event_collection.find_one({'email': auth.username})
+
+        if user_find is not None and event_find is not None:
+            event_collection.remove(event_find[requested_parameters['favorited_event']])
+            print('The users specific favorited event has been deleted')
+            return event_collection, 204, None
+
+   
+        
 
             
-
 
     
 api.add_resource(User, "/users")
