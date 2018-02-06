@@ -92,12 +92,50 @@ class User(Resource):
             print("User has succesfully been posted")
             return(requested_json, 201, None)
 
+    @authenticated_request
+    def delete(self):
+        # This function is going to be the function that deletes users
+        # First we have to make sure that the user exists before we can delete them
+        auth = request.authorization
 
+        user_find = user_collection.find_one({'email': auth.username})
 
+        if user_find is not None:
+            user_collection.remove(user_find)
+            return user_find, 204, None
 
+            
 
+class Categories(Resource):
 
-    
+    @authenticated_request
+    def post(self):
+        '''This function is what is responsible for posting users categories to the database'''
+        # First we have to make sure the user is logged in before they can post categories
+        auth = request.authorization
+
+        user_find = user_collection.find_one({'email': auth.username})
+        requested_json = request.json
+        category_collection = db.category_collection
+
+        if 'email' in requested_json and 'categories' in requested_json and user_find is not None:
+            user_find['email'] = requested_json['email']
+            user_find["categories"] = requested_json['categories']
+            return user_find, 201, None
+
+    @authenticated_request
+    def delete(self):
+        '''This is the function that is going to delete the users interested_categories'''
+        # First we have to make sure that the user is logged in
+        auth = request.authorization
+
+        user_find = users_collection.find_one({'email': auth.username})
+        
+
+        if user_find is not None and :
+
+            
+
 
     
 api.add_resource(User, "/users")
