@@ -1,4 +1,4 @@
-#!/Users/matthewharrilal/Desktop/Product-College-Projects/MeetEvent-App/Server-Files/development/bin/python
+#!/Users/matthewharrilal/Desktop/Product-College-Projects/MeetEvent-App/development/bin/python
 
 import sys
 import getopt
